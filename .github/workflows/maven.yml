@@ -51,9 +51,10 @@ jobs:
       run: echo "Test Execution Completed"
 
     - name: Copy report into gh-pages folder
+      if: always()
       run: |
         mkdir: -p public/extent-reports/Screenshots
-        cp report.html public/extent-reports/
+        cp -R report.html public/extent-reports/
         cp -R Screenshots/* public/extent-reports/Screenshots/
         ls -l public/extent-reports
 
