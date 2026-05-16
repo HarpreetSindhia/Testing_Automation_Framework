@@ -27,14 +27,14 @@ jobs:
 
     - name: Upload Test Logs
       if: always()
-      uses: actions/download-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
         name: Test Logs
         path: logs/
 
     - name: Upload Screenshots
       if: always()
-      uses: actions/download-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
         name: Screenshots
         path: Screenshots/
@@ -42,7 +42,7 @@ jobs:
 
     - name: Upload Test Reports
       if: always()
-      uses: actions/download-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
         name: Test Reports
         path: report.html
@@ -53,7 +53,7 @@ jobs:
     - name: Copy report into gh-pages folder
       if: always()
       run: |
-        mkdir: -p public/extent-reports/Screenshots
+        mkdir -p public/extent-reports/Screenshots
         cp -R report.html public/extent-reports/
         cp -R Screenshots/* public/extent-reports/Screenshots/
         ls -l public/extent-reports
