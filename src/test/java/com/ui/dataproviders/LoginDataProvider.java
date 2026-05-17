@@ -21,7 +21,7 @@ public class LoginDataProvider {
 	public static Iterator<Object[]> loginDataProvider()
 	{
 		Gson gson = new Gson();
-		File jsonFile = new File(System.getProperty("user.dir")+"\\testData\\LoginData.json");
+		File jsonFile = new File(System.getProperty("user.dir")+File.separator+"testData"+File.separator+"LoginData.json");
 		FileReader fileReader = null;
 		try {
 			fileReader = new FileReader(jsonFile);
