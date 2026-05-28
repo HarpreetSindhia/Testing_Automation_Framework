@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import com.constants.SizePro;
 import com.ui.pages.MyAccountPage3;
 
-public class ProductCheckout2 extends TestBase {
+public class ProductCheckout2 extends TestBase2 {
 	
 	private static final String EMAIL_ADDRESS = "dipibe7483@4heats.com";
 	

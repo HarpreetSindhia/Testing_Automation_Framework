@@ -13,11 +13,15 @@ public class MyAccountPage3 extends BrowserUtility {
 		super(driver);
 	}
 	
+	private static final By USER_NAME_LOCATOR = By.xpath("//a[@title='View my customer account']/span");
 	private static final By ADD_MY_NEW_ADDRESS_LOCATOR = By.xpath("//li/a[@title='Add my first address']");
 	
 	private static final By SEARCH_TEXTBOX_LOCATOR = By.id("search_query_top");
 	
-	
+	public String getUserName()
+	{
+		return visibleText(USER_NAME_LOCATOR);
+	}
 	
 	public AddressPage3 goToAddressPage()
 	{

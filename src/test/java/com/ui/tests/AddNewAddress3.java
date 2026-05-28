@@ -8,7 +8,7 @@ import com.ui.pages.MyAccountPage3;
 import com.ui.pojos.AddressPojo2;
 import com.utility.FakeReader2Utility;
 
-public class AddNewAddress3  extends TestBase {
+public class AddNewAddress3  extends TestBase2 {
 
 	private static final String EMAIL_ADDRESS = "dipibe7483@4heats.com";
 	

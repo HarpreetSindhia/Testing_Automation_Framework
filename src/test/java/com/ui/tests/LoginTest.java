@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.ui.pojos.User;
 
 @Listeners(com.ui.listeners.TestListeners.class)
-public class LoginTest extends TestBase {
+public class LoginTest extends TestBase2 {
 
 	@Test(description = "Verifies if valid user is able to login to the application " , groups = {"e2e" , "sanity"},
 			dataProviderClass = com.ui.dataproviders.LoginDataProvider.class , dataProvider = "LoginTestDataProvider")
@@ -16,7 +16,7 @@ public class LoginTest extends TestBase {
 	
 	public void loginTest(User user)
 	{
-		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress() , user.getPassword()).getUserName(), user.getExpectedName());
+		assertEquals(homePage.goToLoginPage().doLoginWithCreds3(user.getEmailAddress() , user.getPassword()).getUserName(), user.getExpectedName());
 		
 	}
 	

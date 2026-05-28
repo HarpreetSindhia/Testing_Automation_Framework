@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.ui.pages.MyAccountPage3;
 
-public class SearchProductTest extends TestBase{
+public class SearchProductTest extends TestBase2{
 	
 	private static final String EMAIL_ADDRESS = "dipibe7483@4heats.com";
 	private static final String PASSWORD = "password";
