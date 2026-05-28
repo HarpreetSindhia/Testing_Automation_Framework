@@ -23,7 +23,7 @@ jobs:
         cache: maven
         
     - name: Running Test Automation Framework using Maven
-      run: mvn test -X -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true
+      run: mvn test -X -Dbrowser=chrome -DisBrowserStackTest=false -DisHeadless=true
 
     - name: Upload Test Logs
       if: always()
@@ -64,6 +64,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4.8.0
       with:
         folder: public/extent-reports
-        token: ${{secrets.PAT_1122}}
+        token: ${{secrets.NEW_PAT}}
         clean: true
     
