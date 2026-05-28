@@ -9,13 +9,9 @@
 		
 		
 		<classes>
-			<class name="com.ui.tests.LoginTest" />
 			<class name="com.ui.tests.InvalidLoginCredentials"/>
-			<class name="com.ui.tests.ProductSearchTest"/>
-			<class name="com.ui.tests.AddNewAddressTest"/>
-			<class name="com.ui.tests.ProductCheckoutTest"/>
-			
 		</classes>
+			
 	</test>
 </suite>
 

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="BrowserStack Suite">
+  <parameter name="browser" value="${browser}"/>
+  <parameter name="isBrowserStackTest" value="${isBrowserStackTest}"/>
+  <parameter name="isHeadless" value="${isHeadless}"/>
+  <test name="FlipkartTest">
+    <classes>
+      <class name="com.ui.tests.Flipkart_Test2"/>
+    </classes>
+  </test>
+</suite>
+

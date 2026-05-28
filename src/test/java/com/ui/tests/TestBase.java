@@ -25,9 +25,11 @@ public class TestBase {
 			
 			@Optional("chrome")String browser , 
 			@Optional("false") Boolean isLambdaTest, 
-			@Optional("true") Boolean isHeadless, Method method)
+			@Optional("false") Boolean isHeadless, Method method)
 	{
 		String testName =	method.getName();
+		
+		this.isLambdaTest = isLambdaTest;
 		
 		if(isLambdaTest)
 		{
@@ -40,7 +42,7 @@ public class TestBase {
 		else
 		{
 					
-			homePage = new HomePage(Browser.valueOf(browser.toUpperCase()),true);
+			homePage = new HomePage(Browser.valueOf(browser.toUpperCase()),false);
 		}
 	}
 	
